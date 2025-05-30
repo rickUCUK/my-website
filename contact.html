@@ -21,12 +21,24 @@
         .main-content {
             flex: 1;
         }
+
+        .contact-img {
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+            max-height: 120px;
+        }
     </style>
 </head>
 
 <body>
     <div class="page-container">
-        <!-- Navigation bar -->
+
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
             <div class="container">
                 <a class="navbar-brand fw-bold" href="index.html">Vibrant Nutrition</a>
@@ -35,39 +47,32 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
+        <!-- Main Content -->
         <div class="main-content">
-            <div class="bg-light py-5">
+            <div class="bg-light py-4">
                 <div class="container">
-                    <div class="row align-items-center mb-5">
+                    <div class="row align-items-center mb-3">
                         <div class="col-md-6">
-                            <h1 class="display-5">Get in Touch</h1>
-                            <p class="lead">We’d love to hear from you! Whether it's feedback, questions, or
-                                collaborations — reach out and one of us will get back to you shortly.</p>
+                            <h1 class="display-6">Get in Touch</h1>
+                            <p class="lead mb-2">Have feedback or questions? Reach out and we’ll get back to you
+                                shortly.</p>
                         </div>
                         <div class="col-md-6">
                             <img src="https://media.istockphoto.com/id/2172494039/photo/business-help-desk.jpg?s=612x612&w=0&k=20&c=_Iay3_NildwBpTJK0SXEcrXPhoaf7r8lBwYwo9VU9vE="
-                                class="img-fluid rounded shadow" alt="Contact us" />
+                                class="img-fluid rounded shadow contact-img" alt="Contact us" />
                         </div>
                     </div>
 
-                    <form class="mb-5">
+                    <form class="mb-4">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label for="name" class="form-label">Your Name</label>
@@ -79,28 +84,26 @@
                             </div>
                             <div class="col-12">
                                 <label for="message" class="form-label">Your Message</label>
-                                <textarea class="form-control" id="message" rows="5"
-                                    placeholder="How can we help you?"></textarea>
+                                <textarea class="form-control" id="message" rows="3"
+                                    placeholder="Let us know how we can help."></textarea>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary px-4">Send Message</button>
+                                <button type="submit" class="btn btn-primary px-4">Send</button>
                             </div>
                         </div>
                     </form>
 
-                    <hr />
-
                     <div class="row text-center">
-                        <div class="col-md-6 mb-4">
+                        <div class="col-6 col-md-6 mb-3">
                             <img src="https://t4.ftcdn.net/jpg/01/15/85/23/240_F_115852367_E6iIYA8OxHDmRhjw7kOq4uYe4t440f14.jpg"
-                                alt="Team member 1" class="rounded-circle mb-2" width="100" height="100" />
-                            <h5 class="mb-0">Richard Grisewood</h5>
+                                alt="Richard Grisewood" class="rounded-circle mb-2" width="80" height="80" />
+                            <h6 class="mb-0">Richard Grisewood</h6>
                             <small class="text-muted">Co-Founder</small>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Team member 2"
-                                class="rounded-circle mb-2" width="100" height="100" />
-                            <h5 class="mb-0">Louie Vint</h5>
+                        <div class="col-6 col-md-6 mb-3">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Louie Vint"
+                                class="rounded-circle mb-2" width="80" height="80" />
+                            <h6 class="mb-0">Louie Vint</h6>
                             <small class="text-muted">Co-Founder</small>
                         </div>
                     </div>
@@ -108,11 +111,13 @@
             </div>
         </div>
 
-        <!-- Sticky footer -->
+        <!-- Footer -->
         <footer class="bg-dark text-light text-center py-3 mt-auto">
             <small>&copy; 2025 Vibrant Nutrition. All rights reserved.</small>
         </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
