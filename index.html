@@ -5,131 +5,185 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vibrant Nutrition</title>
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; img-src 'self' data: https:; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net;">
     <link rel="icon" type="image/png" href="favicon.png" />
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+    <!-- MDB CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
 
     <style>
-        html,
         body {
-            height: 100%;
-        }
-
-        .page-container {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .main-content {
-            flex: 1;
-        }
-
-        .card-img-top {
-            height: 450px;
-            object-fit: cover;
-        }
-
-        .card-body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-body .btn {
-            margin-top: auto;
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
 
-<body>
-    <div class="page-container">
+<body class="min-vh-100 d-flex flex-column">
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand fw-bold" href="#">Vibrant Nutrition</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Vibrant Nutrition</a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="flex-fill">
+        <div class="container py-5">
+            <h2 class="text-center mb-5">Featured Products</h2>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://res.cloudinary.com/jerrick/image/upload/v1733299015/67500b46fa0f68001d4c2289.webp"
+                            class="card-img-top" alt="Nagano Tonic">
+                        <div class="card-body">
+                            <h5 class="card-title">Nagano Tonic <span class="badge bg-warning text-dark ms-2">Top
+                                    Seller</span></h5>
+                            <p class="card-text">Supports fat loss, boosts energy, and helps you feel younger.</p>
+                            <div class="mb-2 text-warning">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm"><i class="fas fa-cart-plus me-2"></i>Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://nuunutrition.com/cdn/shop/files/7_with_new_bottle.jpg?v=1726183505"
+                            class="card-img-top" alt="Greens">
+                        <div class="card-body">
+                            <h5 class="card-title">Super Greens Blend</h5>
+                            <p class="card-text">Daily nutrition with over 40 greens, vitamins & antioxidants.</p>
+                            <div class="mb-2 text-warning">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm"><i class="fas fa-cart-plus me-2"></i>Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://static.wixstatic.com/media/fb3068_2f889409d7fb4be9a6e4ed1301d3be07~mv2.png"
+                            class="card-img-top" alt="Bottle">
+                        <div class="card-body">
+                            <h5 class="card-title">Hydration Tracker Bottle</h5>
+                            <p class="card-text">Track water intake hourly. BPA-free and leakproof.</p>
+                            <div class="mb-2 text-warning">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm"><i class="fas fa-cart-plus me-2"></i>Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://lumitherapy.co.uk/cdn/shop/files/ecowolfstretchmat2306144_1df0eb31-0ab4-4516-9ea6-73595395a882.jpg"
+                            class="card-img-top" alt="Yoga Mat">
+                        <div class="card-body">
+                            <h5 class="card-title">Eco Yoga Mat <span class="badge bg-info text-dark ms-2">Eco</span>
+                            </h5>
+                            <p class="card-text">Non-slip, recyclable material for home or studio sessions.</p>
+                            <div class="mb-2 text-warning">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="far fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm"><i class="fas fa-cart-plus me-2"></i>Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://static.thcdn.com/productimg/original/10530077-6325188808606133.jpg"
+                            class="card-img-top" alt="Vitamins">
+                        <div class="card-body">
+                            <h5 class="card-title">Daily Multivitamin</h5>
+                            <p class="card-text">Complete formula with 26 active vitamins & minerals.</p>
+                            <div class="mb-2 text-warning">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm"><i class="fas fa-cart-plus me-2"></i>Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://m.media-amazon.com/images/I/71DEwBeQwgL._UF894,1000_QL80_.jpg"
+                            class="card-img-top" alt="Blender">
+                        <div class="card-body">
+                            <h5 class="card-title">Smoothie Blender <span class="badge bg-danger ms-2">New</span></h5>
+                            <p class="card-text">Portable and USB-chargeable for shakes on the go.</p>
+                            <div class="mb-2 text-warning">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="far fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-success btn-sm"><i class="fas fa-cart-plus me-2"></i>Buy Now</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-
-        <!-- Main content -->
-        <div class="main-content">
-            <section class="container my-5">
-                <h2 class="text-center mb-4">Latest Articles</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card shadow-sm h-100">
-                            <img src="https://images.themodernproper.com/production/posts/2021/Smoothie-Bowl-8.jpeg?w=1200&q=82&auto=format&fit=crop&dm=1641225383&s=3ea629348de28e45c481ec6103babac7"
-                                class="card-img-top" alt="Smoothie Bowl">
-                            <div class="card-body">
-                                <h5 class="card-title">Whole Food Power</h5>
-                                <p class="card-text">Discover how natural ingredients fuel your body and mind.</p>
-                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-sm h-100">
-                            <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=800&q=80"
-                                class="card-img-top" alt="Avocado Toast">
-                            <div class="card-body">
-                                <h5 class="card-title">Simple Recipes</h5>
-                                <p class="card-text">Nourishing meals you can prepare in minutes without compromise.</p>
-                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-sm h-100">
-                            <img src="https://cdn.gymaholic.co/articles/mind-body-exercises-finding-balance-between-mind-and-body/yoga-large.webp"
-                                class="card-img-top" alt="Wellness Walk">
-                            <div class="card-body">
-                                <h5 class="card-title">Mind-Body Balance</h5>
-                                <p class="card-text">How wellness routines can transform your day-to-day life.</p>
-                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
+    </main>
 
-        <!-- Sticky footer -->
-        <footer class="bg-dark text-light text-center py-3 mt-auto">
-            <small>&copy; 2025 Vibrant Nutrition. All rights reserved.</small>
-        </footer>
-    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h5 class="text-uppercase">Vibrant Nutrition</h5>
+                    <p>Your trusted destination for wellness and natural health.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h6 class="text-uppercase">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Shop</a></li>
+                        <li><a href="#" class="text-white">About</a></li>
+                        <li><a href="#" class="text-white">Blog</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h6 class="text-uppercase">Follow Us</h6>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 bg-secondary">
+            &copy; 2025 <strong>Vibrant Nutrition</strong>. All rights reserved.
+        </div>
+    </footer>
 
-    <!-- Awin Tracking Pixel -->
-    <img src="https://www.awin1.com/placeholder-pixel.gif" width="1" height="1" style="display:none;" alt="Awin" />
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- MDB & FontAwesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 </body>
 
 </html>
-
-<script>
-    window.addEventListener('load', function () {
-        const img = new Image();
-        img.src = "https://www.awin1.com/placeholder-pixel.gif";
-        img.width = 1;
-        img.height = 1;
-        img.style.display = "none";
-        img.alt = "Awin";
-        document.body.appendChild(img);
-    });
-</script>
